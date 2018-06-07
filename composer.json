@@ -1,5 +1,5 @@
 {
-    "name": "urbanindoo/yii2-json-log-file-target",
+    "name": "urbanindo/yii2-json-log-file-target",
     "description": "File target that stores log as JSON",
     "type": "library",
     "license": "MIT",
