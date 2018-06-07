@@ -8,6 +8,9 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 
+before_script:
+  - mkdir log
+
 script:
   - ./vendor/bin/phpunit --coverage-clover 'reports/clover.xml'
 
