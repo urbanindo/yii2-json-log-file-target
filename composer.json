@@ -1,0 +1,33 @@
+{
+    "name": "urbanindoo/yii2-json-log-file-target",
+    "description": "File target that stores log as JSON",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petra Barus",
+            "email": "petra.barus@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "yiisoft/yii2": ">2.0.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.6.*",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/php-code-coverage": "2.2.4",
+        "fzaninotto/faker": "dev-master",
+        "flow/jsonpath": "dev-master",
+        "yiisoft/yii2-coding-standards": "*",
+        "yiisoft/yii2-redis": "*",
+        "videlalvaro/php-amqplib": "2.5.*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "UrbanIndo\\Yii2\\JsonFileTarget\\": "src/"
+        }
+    }
+}
