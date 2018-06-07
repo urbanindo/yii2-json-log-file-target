@@ -1,0 +1,19 @@
+language: php
+dist: trusty
+php:
+  - 7
+  - 7.1
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+script:
+  - ./vendor/bin/phpunit --coverage-clover 'reports/clover.xml'
+
+install:
+  - travis_retry composer self-update && composer --version
+  - travis_retry composer install --prefer-dist --no-interaction
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
