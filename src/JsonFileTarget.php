@@ -52,7 +52,7 @@ class JsonFileTarget extends FileTarget
 
         $text = $this->parseMessage($message);
         $basicInfo = [
-            'timestamp' => self::formatTime($timestamp),
+            'timestamp' => $this->getTime($timestamp),
             'level' => Logger::getLevelName($level),
             'category' => $category,
             'traces' => $traces,
