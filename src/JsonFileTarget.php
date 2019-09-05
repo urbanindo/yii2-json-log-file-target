@@ -98,11 +98,6 @@ class JsonFileTarget extends FileTarget
         }
     }
 
-    protected static function formatTime($timestamp): string
-    {
-        return date('Y-m-d H:i:s', $timestamp);
-    }
-
     protected static function formatTracesIfExists($log): array
     {
         $traces = ArrayHelper::getValue($log, 4, []);
