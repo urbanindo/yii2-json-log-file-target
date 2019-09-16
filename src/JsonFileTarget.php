@@ -52,7 +52,7 @@ class JsonFileTarget extends FileTarget
 
         $text = $this->parseMessage($message);
         $basicInfo = [
-            'timestamp' => self::formatTime($timestamp),
+            'timestamp' => $this->getTime($timestamp),
             'level' => Logger::getLevelName($level),
             'category' => $category,
             'traces' => $traces,
@@ -96,11 +96,6 @@ class JsonFileTarget extends FileTarget
         } catch (InvalidArgumentException $e) {
             return $message;
         }
-    }
-
-    protected static function formatTime($timestamp): string
-    {
-        return date('Y-m-d H:i:s', $timestamp);
     }
 
     protected static function formatTracesIfExists($log): array
